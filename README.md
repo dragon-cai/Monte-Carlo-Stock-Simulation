@@ -11,6 +11,7 @@ This project implements a stochastic Monte Carlo model in Python that simulates 
 - **matplotlib**
 - **datetime**
 
+
 ## How to Run
 ### 1. Clone Repo
 ```bash
@@ -31,9 +32,23 @@ Enter Stock Ticker (e.g. AMZN):
 Enter the forecast horizon in trading days within the next year (1 - 252):
 ```
 
+
 ## Pull Historical Data from Yahoo Finance API
 ### Plot Last 5 Year's Closing Prices
 <img width="1742" height="1102" alt="image" src="https://github.com/user-attachments/assets/34c01273-a344-4f1f-9bbe-624be8175f85" />
+### Calculate Daily Log Returns
+<img width="1742" height="1102" alt="image" src="https://github.com/user-attachments/assets/dee293ee-aab2-464f-916d-d74923fb1b47" />
+Measure the
+```python
+def calculate_return(data):
+  # pct_change() = (Pt - Pt-1)/Pt-1 = (Pt/Pt-1) - 1
+  # pct.change() + 1 to get daily return = (Pt/Pt-1)
+  close_prices = data["Close"].squeeze()
+  log_return = np.log(close_prices.pct_change() + 1)
+  # remove first pct_change value of NaN, no previous day's price
+  log_return = log_return[1:]
+  return log_return
+```
 
 
 README coming soon (WIP)
