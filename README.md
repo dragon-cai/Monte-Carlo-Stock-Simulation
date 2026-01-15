@@ -12,13 +12,18 @@ This project implements a stochastic Monte Carlo model in Python that simulates 
 - **datetime**
 
 ## How to Run
+### 1. Clone Repo
+```bash
+git clone https://github.com/dragon-cai/Monte-Carlo-Stock-Simulation.git
+cd Monte-Carlo-Stock-Simulation
+
 ### 1. Install Dependencies
 ```bash
-pip install numpy pandas yfinance matplotlib
+python -m pip install numpy pandas yfinance matplotlib
 ```
 ### 2. Run Python Script
 ```bash
-python Monte_Carlo_Stock_Simulation.py
+python monte_carlo_stock_simulation.py
 ```
 
 
