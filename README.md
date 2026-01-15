@@ -59,6 +59,20 @@ def calculate_return(data):
 <img width="904" height="556" alt="image" src="https://github.com/user-attachments/assets/6b781f51-8f70-418d-8ce1-691114816305" />
 
 ## Setting up the Monte Carlo Model
+### Input Parameters
+```python
+# annual drift
+avg = log_return.mean() * 252
+# annual volatility
+std = log_return.std() * np.sqrt(252)
+# 252 trading days in 1 year
+num_days = 252
+# num of simulated futures
+num_simulations = 10000
+last_price = data["Close"].iloc[-1]
+```
+### Geometric Brownian Motion
+
 
 
 
