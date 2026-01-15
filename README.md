@@ -42,6 +42,9 @@ Daily log returns measure the percent change of stock price from one day to the 
 
 <img width="196" height="100" alt="image" src="https://github.com/user-attachments/assets/dcc8c6f2-8ef4-4887-95ce-5662320e9c19" />
 
+  pct_change() = (Pt - P_{t-1})/Pt-1 = (Pt/P_(t-1)) - 1
+  pct.change() + 1 to get daily return = (Pt/Pt-1)
+  
 ```python
 def calculate_return(data):
   # pct_change() = (Pt - P_(t-1))/Pt-1 = (Pt/P_(t-1)) - 1
