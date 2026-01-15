@@ -91,6 +91,7 @@ def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
 
 ## Output
 The results of this project include the graphs of the stock's closing price and daily log returns in the last 5 years for context. It also outputs a plot of the Monte Carlo model displaying 10,000 future price paths for a stock. Specific risk metrics including median simulated price, confidence intervals, value at risk, and probabilities of loss/gain are calculated to quantify the stock's future potential. Users can leverage these metrics to assess upside and downside potential, understand risk exposure, and inform investment decisions.  
+  
 <img width="1017" height="615" alt="image" src="https://github.com/user-attachments/assets/d9c692fe-a740-42b7-89a0-678529795ae9" />
 
 ```
