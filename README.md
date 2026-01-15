@@ -39,6 +39,7 @@ Enter the forecast horizon in trading days within the next year (1 - 252):
 ### Calculate Daily Log Returns
 <img width="1742" height="1102" alt="image" src="https://github.com/user-attachments/assets/dee293ee-aab2-464f-916d-d74923fb1b47" />
 Measure the
+
 ```python
 def calculate_return(data):
   # pct_change() = (Pt - Pt-1)/Pt-1 = (Pt/Pt-1) - 1
