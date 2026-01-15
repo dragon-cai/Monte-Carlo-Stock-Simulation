@@ -16,12 +16,12 @@ This project implements a stochastic Monte Carlo model in Python that simulates 
 ```bash
 git clone https://github.com/dragon-cai/Monte-Carlo-Stock-Simulation.git
 cd Monte-Carlo-Stock-Simulation
-
-### 1. Install Dependencies
+```
+### 2. Install Dependencies
 ```bash
 python -m pip install numpy pandas yfinance matplotlib
 ```
-### 2. Run Python Script
+### 3. Run Python Script
 ```bash
 python monte_carlo_stock_simulation.py
 ```
