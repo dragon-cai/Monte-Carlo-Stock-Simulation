@@ -73,9 +73,9 @@ last_price = data["Close"].iloc[-1]
 ```
 ### Geometric Brownian Motion
 The Geometric Brownian Motion (GBM) model is a stochastic process used in finance to simulate stock price paths. It utilizes a stock's drift and volatility as the mean and standard deviation to model the expected growth. At the same time, random market fluctuations are applied to generate possible futures. This is the standard stochastic formula for GBM:
-<img width="488" height="98" alt="image" src="https://github.com/user-attachments/assets/fc30fe6c-e3ff-45d5-917b-35c760fbcb8a" />
-This project implements the GBM model using its discrete-time form: 
-<img width="810" height="102" alt="image" src="https://github.com/user-attachments/assets/947e49d0-e5a6-42d9-a0da-428a9809d866" />
+<img width="488" height="98" alt="image" src="https://github.com/user-attachments/assets/fc30fe6c-e3ff-45d5-917b-35c760fbcb8a" />  
+This project implements the GBM model using its discrete-time form:  
+<img width="810" height="102" alt="image" src="https://github.com/user-attachments/assets/947e49d0-e5a6-42d9-a0da-428a9809d866" />  
 In code, GBM will be used to model 10,000 different future price paths over a forecast horizon of 252 trading days.
 ```python
 def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
@@ -90,7 +90,7 @@ def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
 ```
 
 ## Output
-The results of this project include the graphs of the stock's closing price and daily log returns in the last 5 years for context. It also outputs a plot of the Monte Carlo model displaying 10,000 future price paths for a stock. Specific risk metrics including median simulated price, confidence intervals, value at risk, and probabilities of loss/gain are calculated to quantify the stock's future potential. Users can leverage these metrics to assess upside and downside potential, understand risk exposure, and inform investment decisions.
+The results of this project include the graphs of the stock's closing price and daily log returns in the last 5 years for context. It also outputs a plot of the Monte Carlo model displaying 10,000 future price paths for a stock. Specific risk metrics including median simulated price, confidence intervals, value at risk, and probabilities of loss/gain are calculated to quantify the stock's future potential. Users can leverage these metrics to assess upside and downside potential, understand risk exposure, and inform investment decisions.  
 <img width="1017" height="615" alt="image" src="https://github.com/user-attachments/assets/d9c692fe-a740-42b7-89a0-678529795ae9" />
 
 ```
