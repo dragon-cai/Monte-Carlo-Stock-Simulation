@@ -34,7 +34,7 @@ Enter the forecast horizon in trading days within the next year (1 - 252):
 
 
 ## Pull Historical Data from Yahoo Finance API
-### Pull Last 5 Years of Closing Prices
+### Output Last 5 Years of Closing Prices
 <img width="892" height="542" alt="image" src="https://github.com/user-attachments/assets/b8d43f6d-5b41-4778-8c15-3a44b74bce14" />
 
 ### Calculate Daily Log Returns
@@ -61,40 +61,37 @@ def calculate_return(data):
 ## Setting up the Monte Carlo Model
 ### Input Parameters
 ```python
-# annual drift
-avg = log_return.mean() * 252
-# annual volatility
-std = log_return.std() * np.sqrt(252)
+annual_drift = log_return.mean() * 252
+annual_volatility = log_return.std() * np.sqrt(252)
 # 252 trading days in 1 year
 num_days = 252
+# one trading day
+time_step = 1/252
 # num of simulated futures
 num_simulations = 10000
 last_price = data["Close"].iloc[-1]
 ```
 ### Geometric Brownian Motion
-
-Stochastic Formula:
+The Geometric Brownian Motion (GBM) model is a stochastic process used in finance to simulate stock price paths. It utilizes a stock's drift and volatility as the mean and standard deviation to model the expected growth. At the same time, random market fluctuations are applied to generate possible futures. This is the standard stochastic formula for GBM:
 <img width="488" height="98" alt="image" src="https://github.com/user-attachments/assets/fc30fe6c-e3ff-45d5-917b-35c760fbcb8a" />
-
-Integrate using Itô’s Lemma
-
-to get discrete time GBM formula:
+This project implements the GBM model using its discrete-time form: 
 <img width="810" height="102" alt="image" src="https://github.com/user-attachments/assets/947e49d0-e5a6-42d9-a0da-428a9809d866" />
-e^ form:
-<img width="540" height="94" alt="image" src="https://github.com/user-attachments/assets/3f7766b8-5466-4cd0-8503-9475740f9591" />
+In code, GBM will be used to model 10,000 different future price paths over a forecast horizon of 252 trading days.
+```python
+def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
+  # random shocks
+  Z = np.random.normal(size = (num_days + 1, num_simulations))
+  simulated = np.zeros((num_days + 1, num_simulations))
+  simulated[0, :] = last_price
+  for day in range(1, num_days + 1):
+    # Geometric Brownian Motion formula
+    simulated[day, :] = simulated[day-1, :] * np.exp((drift - 0.5*volatility**2)*(dt) + volatility*(np.sqrt(dt))*Z[day, :])
+  return simulated
+```
 
-
-
-
-
-
-
-Monte Carlo:
+## Output
+The results of this project include the graphs of the stock's closing price and daily log returns in the last 5 years for context. It also outputs a plot of the Monte Carlo model displaying 10,000 future price paths for a stock. Specific risk metrics including median simulated price, confidence intervals, value at risk, and probabilities of loss/gain are calculated to quantify the stock's future potential. Users can leverage these metrics to assess upside and downside potential, understand risk exposure, and inform investment decisions.
 <img width="1017" height="615" alt="image" src="https://github.com/user-attachments/assets/d9c692fe-a740-42b7-89a0-678529795ae9" />
-
-Output:
-<img width="622" height="559" alt="image" src="https://github.com/user-attachments/assets/da6897b3-e894-45c7-8caf-6cd772c55c9d" />
-
 
 ```
 ================= MONTE CARLO SIMULATIONS RESULTS FOR AAPL =================
@@ -130,8 +127,6 @@ Probability of >10% Loss: 20.93%
 Value at Risk (5% worst): $74.24 (28.56% loss)
 ```
 
+## Backtesting Results
 
-
-
-
-README coming soon (WIP)
+## Model Limitations
