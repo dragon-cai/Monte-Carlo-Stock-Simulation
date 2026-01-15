@@ -131,3 +131,7 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 ## Backtesting Results
 
 ## Model Limitations
+- Extreme events and market shocks are not accounted for. Model follows expected growth with small random fluctuations
+- Simulations estimates are meant to quantify risk rather than a single accurate future price
+- GBM model assumes constant drift and volatility, may not reflect real market and stock behavior
+- Parameters derived from past historical performance which does not guarentee similar future results
