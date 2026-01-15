@@ -34,18 +34,18 @@ Enter the forecast horizon in trading days within the next year (1 - 252):
 
 
 ## Pull Historical Data from Yahoo Finance API
-### Plot Last 5 Year's Closing Prices
+### Pull Last 5 Years of Closing Prices
 <img width="892" height="542" alt="image" src="https://github.com/user-attachments/assets/b8d43f6d-5b41-4778-8c15-3a44b74bce14" />
 
 ### Calculate Daily Log Returns
-Daily log returns measure the percent change of stock price from one day to the next. This measure of a stock's daily fluctuation allows us to estimate the volatility and drift.
+Daily log returns measure the compounding rate of change of a stock price from one day to the next. By capturing the stock's daily fluctuations, volatility and draft can be calculated as parameters for the Monte Carlo model. Daily log returns can be calculated from the historical data of closing prices using this formula:
 
 <img width="196" height="100" alt="image" src="https://github.com/user-attachments/assets/dcc8c6f2-8ef4-4887-95ce-5662320e9c19" />
 
 
-Calculate Daily Log Returns in this way:
-pct_change() = (Pₜ-Pₜ₋₁)/Pₜ₋₁ = (Pₜ/Pₜ₋₁)-1
-Daily Returns = pct.change() + 1 = (Pₜ/Pₜ₋₁)
+#### Implement Daily Log Return Calculations:
+pct_change() = (Pₜ-Pₜ₋₁)/Pₜ₋₁ = (Pₜ/Pₜ₋₁)-1  
+Daily Returns = pct.change() + 1 = (Pₜ/Pₜ₋₁)  
 Daily Log Returns = np.log(pct.change()+1)
   
 ```python
@@ -57,6 +57,8 @@ def calculate_return(data):
   return log_return
 ```
 <img width="904" height="556" alt="image" src="https://github.com/user-attachments/assets/6b781f51-8f70-418d-8ce1-691114816305" />
+
+## Setting up the Monte Carlo Model
 
 
 
