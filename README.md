@@ -44,7 +44,7 @@ Daily log returns measure the compounding rate of change of a stock price from o
 
 
 #### Implement Daily Log Return Calculations:
-pct_change() = (Pₜ-Pₜ₋₁)/Pₜ₋₁ = (Pₜ/Pₜ₋₁)-1  
+pct.change() = (Pₜ-Pₜ₋₁)/Pₜ₋₁ = (Pₜ/Pₜ₋₁)-1  
 Daily Returns = pct.change() + 1 = (Pₜ/Pₜ₋₁)  
 Daily Log Returns = np.log(pct.change()+1)
   
@@ -72,6 +72,19 @@ num_simulations = 10000
 last_price = data["Close"].iloc[-1]
 ```
 ### Geometric Brownian Motion
+
+Stochastic Formula:
+<img width="488" height="98" alt="image" src="https://github.com/user-attachments/assets/fc30fe6c-e3ff-45d5-917b-35c760fbcb8a" />
+
+Integrate using Itô’s Lemma
+
+to get discrete time GBM formula:
+<img width="810" height="102" alt="image" src="https://github.com/user-attachments/assets/947e49d0-e5a6-42d9-a0da-428a9809d866" />
+e^ form:
+<img width="540" height="94" alt="image" src="https://github.com/user-attachments/assets/3f7766b8-5466-4cd0-8503-9475740f9591" />
+
+
+
 
 
 
