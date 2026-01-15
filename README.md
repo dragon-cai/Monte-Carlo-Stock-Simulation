@@ -25,6 +25,15 @@ python -m pip install numpy pandas yfinance matplotlib
 ```bash
 python monte_carlo_stock_simulation.py
 ```
+### 4. Input Parameters
+```bash
+Enter Stock Ticker (e.g. AMZN):
+Enter the forecast horizon in trading days within the next year (1 - 252):
+```
+
+## Pull Historical Data from Yahoo Finance API
+### Plot Last 5 Year's Closing Prices
+<img width="1742" height="1102" alt="image" src="https://github.com/user-attachments/assets/34c01273-a344-4f1f-9bbe-624be8175f85" />
 
 
 README coming soon (WIP)
