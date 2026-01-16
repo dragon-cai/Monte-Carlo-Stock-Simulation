@@ -72,10 +72,13 @@ num_simulations = 10000
 last_price = data["Close"].iloc[-1]
 ```
 ### Geometric Brownian Motion
-The Geometric Brownian Motion (GBM) model is a stochastic process used in finance to simulate stock price paths. It utilizes a stock's drift and volatility as the mean and standard deviation to model the expected growth. At the same time, random market fluctuations are applied to generate possible futures. This is the standard stochastic formula for GBM:  
+The Geometric Brownian Motion (GBM) model is a stochastic process used in finance to simulate stock price paths. It utilizes a stock's drift and volatility as the mean and standard deviation to model the expected growth. At the same time, random market fluctuations are applied to generate possible futures. This is the standard GBM stochastic formula:  
+  
 <img width="488" height="98" alt="image" src="https://github.com/user-attachments/assets/fc30fe6c-e3ff-45d5-917b-35c760fbcb8a" />  
+  
 This project implements the GBM model using its discrete-time form:  
 <img width="810" height="102" alt="image" src="https://github.com/user-attachments/assets/947e49d0-e5a6-42d9-a0da-428a9809d866" />  
+  
 In code, GBM will be used to model 10,000 different future price paths over a forecast horizon of 252 trading days.
 ```python
 def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
