@@ -136,21 +136,21 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 <tr>
 <td style="padding: 20px;">
   
-**Forecast Horizon**: 100 Trading Days
-**Forecast**: Jan 8, 2025 to June 2, 2025
-**Last Closing Price**: $421.45
-**Median Price**: $449.37 | **Actual**: $460.35
-**90% CI**: ($327.59, $615.87) | Within CI ✔
+**Forecast Horizon**: 100 Trading Days  
+**Forecast**: Jan 8, 2025 to June 2, 2025  
+**Last Closing Price**: $421.45  
+**Median Price**: $449.37 | **Actual**: $460.35  
+**90% CI**: ($327.59, $615.87) | Within CI ✔  
 **Probability of Profit**: 63.42% | Profit ✔
 
 </td>
 <td style="padding: 20px;">
 
-**Forecast Horizon**: 252 Trading Days
-**Forecast**: Jan 10, 2025 to Jan 10, 2026
-**Last Closing Price**: $415.88
-**Median Price**: $497.67 | **Actual**: $478.11
-**90% CI**: ($297.76, $808.31) | Within CI ✔
+**Forecast Horizon**: 252 Trading Days  
+**Forecast**: Jan 10, 2025 to Jan 10, 2026  
+**Last Closing Price**: $415.88  
+**Median Price**: $497.67 | **Actual**: $478.11  
+**90% CI**: ($297.76, $808.31) | Within CI ✔  
 **Probability of Profit**: 70.93% | Profit ✔
 
 </td>
@@ -164,21 +164,21 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 <tr>
 <td style="padding: 20px;">
   
-**Forecast Horizon**: 100 Trading Days
-**Forecast**: Jan 8, 2025 to June 2, 2025
-**Last Closing Price**: $140.07
-**Median Price**: $168.86 | **Actual**: $137.36
-**90% CI**: ($96.69, $292.77) | Within CI ✔
+**Forecast Horizon**: 100 Trading Days  
+**Forecast**: Jan 8, 2025 to June 2, 2025  
+**Last Closing Price**: $140.07  
+**Median Price**: $168.86 | **Actual**: $137.36  
+**90% CI**: ($96.69, $292.77) | Within CI ✔  
 **Probability of Profit**: 71.03%| Profit ✗
 
 </td>
 <td style="padding: 20px;">
 
-**Forecast Horizon**: 252 Trading Days
-**Forecast**: Jan 10, 2025 to Jan 10, 2026
-**Last Closing Price**: $415.88
-**Median Price**: $224.24 | **Actual**: $185.04
-**90% CI**: ($94.53, $543.06) | Within CI ✔
+**Forecast Horizon**: 252 Trading Days  
+**Forecast**: Jan 10, 2025 to Jan 10, 2026  
+**Last Closing Price**: $415.88  
+**Median Price**: $224.24 | **Actual**: $185.04  
+**90% CI**: ($94.53, $543.06) | Within CI ✔  
 **Probability of Profit**: 81.47% | Profit ✔
 
 </td>
@@ -192,21 +192,21 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 <tr>
 <td style="padding: 20px;">
 
-**Forecast Horizon**: 100 Trading Days
-**Forecast**: Jan 8, 2025 to June 2, 2025
-**Last Closing Price**: $87.74
-**Median Price**: $82.62 | **Actual**: $70.77
-**90% CI**: ($51.58, $132.00) | Within CI ✔
+**Forecast Horizon**: 100 Trading Days  
+**Forecast**: Jan 8, 2025 to June 2, 2025  
+**Last Closing Price**: $87.74  
+**Median Price**: $82.62 | **Actual**: $70.77  
+**90% CI**: ($51.58, $132.00) | Within CI ✔  
 **Probability of Profit**: 41.71%| Loss ✔
 
 </td>
 <td style="padding: 20px;">
 
-**Forecast Horizon**: 252 Trading Days
-**Forecast**: Jan 10, 2025 to Jan 10, 2026
-**Last Closing Price**: $87.74
-**Median Price**: $75.70 | **Actual**: $58.27
-**90% CI**: ($36.26, $157.62) | Within CI ✔
+**Forecast Horizon**: 252 Trading Days  
+**Forecast**: Jan 10, 2025 to Jan 10, 2026  
+**Last Closing Price**: $87.74  
+**Median Price**: $75.70 | **Actual**: $58.27  
+**90% CI**: ($36.26, $157.62) | Within CI ✔  
 **Probability of Profit**: 37.66% | Loss ✔
 
 </td>
