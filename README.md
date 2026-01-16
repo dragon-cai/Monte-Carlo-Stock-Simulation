@@ -27,7 +27,7 @@ python -m pip install numpy pandas yfinance matplotlib
 python monte_carlo_stock_simulation.py
 ```
 ### 4. Input Parameters
-```bash
+```
 Enter Stock Ticker (e.g. AMZN):
 Enter the forecast horizon in trading days within the next year (1 - 252):
 ```
@@ -85,7 +85,8 @@ def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
   simulated[0, :] = last_price
   for day in range(1, num_days + 1):
     # Geometric Brownian Motion formula
-    simulated[day, :] = simulated[day-1, :] * np.exp((drift - 0.5*volatility**2)*(dt) + volatility*(np.sqrt(dt))*Z[day, :])
+    simulated[day, :] = simulated[day-1, :] * np.exp((drift - 0.5*volatility**2)*(dt)
+                        + volatility*(np.sqrt(dt))*Z[day, :])
   return simulated
 ```
 
