@@ -1,7 +1,7 @@
 # Monte-Carlo-Stock-Simulation
 
 ## Project Overview
-This project implements a stochastic Monte Carlo model in Python that simulates potential stock outcomes. Users can input a custom stock ticker and forecast horizon (1-252 trading days) which will then generate 10,000 future price paths using Geometric Brownian Motion. The parameters, daily log returns, annual volatility, and drift are derived through a rolling 5 year window of historical data pulled from Yahoo Finance API. The project will quantify the potential outcomes and risk of each stock, providing risk metrics including confidence intervals, Value at Risk (VaR), and probabilities of loss and gain to help inform investment decisions and outcomes.
+This project implements a stochastic Monte Carlo model in Python that simulates potential stock outcomes. Users can input a custom stock ticker and forecast horizon (1-252 trading days) which will then generate 10,000 future price paths using Geometric Brownian Motion. The parameters, daily log returns, annual volatility, and drift are derived through a rolling 5 year window of historical data pulled from Yahoo Finance API. The project will quantify the potential outcomes and risk of each stock, providing risk metrics including confidence intervals, Value at Risk (VaR), and probabilities of loss and gain to help inform investment decisions and outcomes. This project is best suited for risk evaluation rather than specific price estimates.
 
 ## Tech Stack
 - **Python**
@@ -129,6 +129,7 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 ```
 
 ## Backtesting Results
+Backtested Monte Carlo model using three stocks in different categories: declining, medium volatility, and high volatility. All forecasts of MSFT, NVDA, and PYPL fell well within the 90% confidence intervals and were mostly accurate in profit/loss predictions. However, the model showed bias and did not adjust to extreme changes as it utilizes a constant drift/volatility. Higher volatility stocks also provided wider and more inaccurate predictions. The model is better applied toward risk assessment rather than specific price forecasting.
 
 ### Microsoft (Ticker: MSFT)
 #### Medium Volatility Stock Test
