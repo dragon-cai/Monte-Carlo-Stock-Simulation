@@ -1,6 +1,6 @@
 # Monte-Carlo-Stock-Simulation
 
-## Project Overview
+## Overview
 This project implements a stochastic Monte Carlo model in Python that simulates potential stock outcomes. Users can input a custom stock ticker and forecast horizon (1-252 trading days) which will then generate 10,000 future price paths using Geometric Brownian Motion. The parameters, daily log returns, annual volatility, and drift are derived through a rolling 5 year window of historical data pulled from Yahoo Finance API. The project will quantify the potential outcomes and risk of each stock, providing risk metrics including confidence intervals, Value at Risk (VaR), and probabilities of loss and gain to help inform investment decisions and outcomes. This project is best suited for risk evaluation rather than specific price estimates.
 
 ## Tech Stack
@@ -72,7 +72,7 @@ num_simulations = 10000
 last_price = data["Close"].iloc[-1]
 ```
 ### Geometric Brownian Motion
-The Geometric Brownian Motion (GBM) model is a stochastic process used in finance to simulate stock price paths. It utilizes a stock's drift and volatility as the mean and standard deviation to model the expected growth. At the same time, random market fluctuations are applied to generate possible futures. This is the standard stochastic formula for GBM:
+The Geometric Brownian Motion (GBM) model is a stochastic process used in finance to simulate stock price paths. It utilizes a stock's drift and volatility as the mean and standard deviation to model the expected growth. At the same time, random market fluctuations are applied to generate possible futures. This is the standard stochastic formula for GBM:  
 <img width="488" height="98" alt="image" src="https://github.com/user-attachments/assets/fc30fe6c-e3ff-45d5-917b-35c760fbcb8a" />  
 This project implements the GBM model using its discrete-time form:  
 <img width="810" height="102" alt="image" src="https://github.com/user-attachments/assets/947e49d0-e5a6-42d9-a0da-428a9809d866" />  
@@ -148,8 +148,8 @@ Backtested Monte Carlo model using three stocks in different categories: declini
 <td style="padding: 20px;">
 
 **Forecast Horizon**: 252 Trading Days  
-**Forecast**: Jan 10, 2025 to Jan 10, 2026  
-**Last Closing Price**: $415.88  
+**Forecast**: Jan 8, 2025 to Jan 8, 2026  
+**Last Closing Price**: $421.45  
 **Median Price**: $497.67 | **Actual**: $478.11  
 **90% CI**: ($297.76, $808.31) | Within CI ✔  
 **Probability of Profit**: 70.93% | Profit ✔
@@ -176,8 +176,8 @@ Backtested Monte Carlo model using three stocks in different categories: declini
 <td style="padding: 20px;">
 
 **Forecast Horizon**: 252 Trading Days  
-**Forecast**: Jan 10, 2025 to Jan 10, 2026  
-**Last Closing Price**: $415.88  
+**Forecast**: Jan 8, 2025 to Jan 8, 2026  
+**Last Closing Price**: $140.07  
 **Median Price**: $224.24 | **Actual**: $185.04  
 **90% CI**: ($94.53, $543.06) | Within CI ✔  
 **Probability of Profit**: 81.47% | Profit ✔
@@ -204,7 +204,7 @@ Backtested Monte Carlo model using three stocks in different categories: declini
 <td style="padding: 20px;">
 
 **Forecast Horizon**: 252 Trading Days  
-**Forecast**: Jan 10, 2025 to Jan 10, 2026  
+**Forecast**: Jan 8, 2025 to Jan 8, 2026  
 **Last Closing Price**: $87.74  
 **Median Price**: $75.70 | **Actual**: $58.27  
 **90% CI**: ($36.26, $157.62) | Within CI ✔  
