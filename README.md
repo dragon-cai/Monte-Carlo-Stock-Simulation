@@ -134,7 +134,7 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 #### Medium Volatility Stock Test
 <table>
 <tr>
-<td>
+<td style="padding: 20px;">
   
 **Forecast Horizon**: 100 Trading Days
 **Forecast**: Jan 8, 2025 to June 2, 2025
@@ -144,7 +144,7 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 **Probability of Profit**: 63.42% | Profit ✔
 
 </td>
-<td>
+<td style="padding: 20px;">
 
 **Forecast Horizon**: 252 Trading Days
 **Forecast**: Jan 10, 2025 to Jan 10, 2026
@@ -162,7 +162,7 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 
 <table>
 <tr>
-<td>
+<td style="padding: 20px;">
   
 **Forecast Horizon**: 100 Trading Days
 **Forecast**: Jan 8, 2025 to June 2, 2025
@@ -172,7 +172,7 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 **Probability of Profit**: 71.03%| Profit ✗
 
 </td>
-<td>
+<td style="padding: 20px;">
 
 **Forecast Horizon**: 252 Trading Days
 **Forecast**: Jan 10, 2025 to Jan 10, 2026
@@ -180,6 +180,34 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 **Median Price**: $224.24 | **Actual**: $185.04
 **90% CI**: ($94.53, $543.06) | Within CI ✔
 **Probability of Profit**: 81.47% | Profit ✔
+
+</td>
+</tr>
+</table>
+
+### PayPal (Ticker: PYPL)
+#### Declining Stock Test
+
+<table>
+<tr>
+<td style="padding: 20px;">
+
+**Forecast Horizon**: 100 Trading Days
+**Forecast**: Jan 8, 2025 to June 2, 2025
+**Last Closing Price**: $87.74
+**Median Price**: $82.62 | **Actual**: $70.77
+**90% CI**: ($51.58, $132.00) | Within CI ✔
+**Probability of Profit**: 41.71%| Loss ✔
+
+</td>
+<td style="padding: 20px;">
+
+**Forecast Horizon**: 252 Trading Days
+**Forecast**: Jan 10, 2025 to Jan 10, 2026
+**Last Closing Price**: $87.74
+**Median Price**: $75.70 | **Actual**: $58.27
+**90% CI**: ($36.26, $157.62) | Within CI ✔
+**Probability of Profit**: 37.66% | Loss ✔
 
 </td>
 </tr>
