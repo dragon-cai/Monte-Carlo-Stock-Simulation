@@ -1,7 +1,7 @@
 # Monte-Carlo-Stock-Simulation
 
 ## Project Overview
-This project implements a stochastic Monte Carlo model in Python that simulates potential stock outcomes. Users can input a custom stock ticker and forecast horizon (1-252 trading days) which will then generate 10,000 future price paths using Geometric Brownian Motion. The parameters, daily log returns, annual volatility, and drift are derived through a rolling 5 year window of historical data pulled from Yahoo Finance API. The project will quantify the potential outcomes and risk of each stock, providing risk metrics including confidence intervals, Value at Risk (VaR), and probabilities of loss and gain.
+This project implements a stochastic Monte Carlo model in Python that simulates potential stock outcomes. Users can input a custom stock ticker and forecast horizon (1-252 trading days) which will then generate 10,000 future price paths using Geometric Brownian Motion. The parameters, daily log returns, annual volatility, and drift are derived through a rolling 5 year window of historical data pulled from Yahoo Finance API. The project will quantify the potential outcomes and risk of each stock, providing risk metrics including confidence intervals, Value at Risk (VaR), and probabilities of loss and gain to help inform investment decisions and outcomes.
 
 ## Tech Stack
 - **Python**
@@ -90,7 +90,7 @@ def monteCarlo(drift, volatility, num_days, num_simulations, last_price, dt):
 ```
 
 ## Output
-The results of this project include the graphs of the stock's closing price and daily log returns in the last 5 years for context. It also outputs a plot of the Monte Carlo model displaying 10,000 future price paths for a stock. Specific risk metrics including median simulated price, confidence intervals, value at risk, and probabilities of loss/gain are calculated to quantify the stock's future potential. Users can leverage these metrics to assess upside and downside potential, understand risk exposure, and inform investment decisions.  
+The results of this project include the graphs of the stock's closing price and daily log returns in the last 5 years for context. It also outputs a plot of the Monte Carlo model displaying 10,000 future price paths for a stock. Specific risk metrics will also be calculated, including median simulated price, confidence intervals, value at risk, and probabilities of loss/gain, to quantify the stock's future potential. Users can leverage these metrics to assess upside and downside potential, understand risk exposure, and inform investment decisions.  
   
 <img width="1017" height="615" alt="image" src="https://github.com/user-attachments/assets/d9c692fe-a740-42b7-89a0-678529795ae9" />
 
@@ -129,6 +129,65 @@ Value at Risk (5% worst): $74.24 (28.56% loss)
 ```
 
 ## Backtesting Results
+
+### Microsoft (Ticker: MSFT)
+#### Medium Volatility Stock Test
+<table>
+<tr>
+<td>
+  
+**Forecast Horizon**: 100 Trading Days
+**Forecast**: Jan 8, 2025 to June 2, 2025
+**Last Closing Price**: $421.45
+**Median Price**: $449.37 | **Actual**: $460.35
+**90% CI**: ($327.59, $615.87) | Within CI ✔
+**Probability of Profit**: 63.42% | Profit ✔
+
+</td>
+<td>
+
+**Forecast Horizon**: 252 Trading Days
+**Forecast**: Jan 10, 2025 to Jan 10, 2026
+**Last Closing Price**: $415.88
+**Median Price**: $497.67 | **Actual**: $478.11
+**90% CI**: ($297.76, $808.31) | Within CI ✔
+**Probability of Profit**: 70.93% | Profit ✔
+
+</td>
+</tr>
+</table>
+
+### NVIDIA (Ticker: NVDA)
+#### High Volatility Stock Test
+
+<table>
+<tr>
+<td>
+  
+**Forecast Horizon**: 100 Trading Days
+**Forecast**: Jan 8, 2025 to June 2, 2025
+**Last Closing Price**: $140.07
+**Median Price**: $168.86 | **Actual**: $137.36
+**90% CI**: ($96.69, $292.77) | Within CI ✔
+**Probability of Profit**: 71.03%| Profit ✗
+
+</td>
+<td>
+
+**Forecast Horizon**: 252 Trading Days
+**Forecast**: Jan 10, 2025 to Jan 10, 2026
+**Last Closing Price**: $415.88
+**Median Price**: $224.24 | **Actual**: $185.04
+**90% CI**: ($94.53, $543.06) | Within CI ✔
+**Probability of Profit**: 81.47% | Profit ✔
+
+</td>
+</tr>
+</table>
+
+
+
+
 
 ## Model Limitations
 - Extreme events and market shocks are not accounted for. Model follows expected growth with small random fluctuations
